@@ -26,10 +26,16 @@ This project has been thoroughly analyzed for security vulnerabilities using [Sl
 - **ProtocolStaking**: Custody staking contract with automatic reward distribution
 - **ProtocolTimelock**: Configurable timelock controller (default 2-day) for secure DAO governance
 
+### PvP System Contracts (Recently Enhanced)
+- **PlayerRegistry**: Manages player profiles, formations, ELO rankings, and XP progression (45+ tests)
+- **BattleEngine**: Implements turn-based combat algorithm with damage calculation, critical hits, and dodges (12+ tests)
+- **PvPArena**: Orchestrates challenges, wagers, and battle execution (24+ tests)
+
 ### Key Features
 - 🎨 **NFTs**: Solady-optimized ERC721 with immutable baseURI
 - 💰 **Rewards**: 10 POWER tokens per NFT per day
 - 🏛️ **Governance**: DAO with configurable timelock (default 2-day) and voting power
+- ⚔️ **PvP Battles**: Asynchronous 1v1, 3v3, and 5v5 battles with ELO ranking and wagering
 - 🔒 **Security**: Reentrancy protection and role-based access control
 
 ## 📝 Deployed Contracts
@@ -80,6 +86,38 @@ npx hardhat run scripts/deploy.js --network baseSepolia
 npx hardhat run scripts/deploy.js --network ethereum
 ```
 
+### Upload to IPFS (Pinata)
+Upload files to IPFS using Pinata Cloud. The script returns the IPFS hash (CID) of the uploaded file.
+
+**Setup:**
+1. Create an account at [Pinata Cloud](https://www.pinata.cloud/)
+2. Generate a JWT token in your dashboard
+3. Add the token to your `.env` file:
+   ```
+   PINATA_JWT=your_jwt_token_here
+   ```
+
+**Usage:**
+```bash
+# Upload a single file
+node scripts/uploadToPinata.js <file-path>
+
+# Examples
+node scripts/uploadToPinata.js metadata/img/001-protocol-guardians.png
+node scripts/uploadToPinata.js metadata/json/001-protocol-guardians.json
+```
+
+**Output:**
+Returns the IPFS CID (Content Identifier) hash. You can access the file at:
+```
+https://gateway.pinata.cloud/ipfs/<CID>
+```
+
+**Supported file types:**
+- Images (PNG, JPG, GIF, etc.)
+- JSON files
+- Any file type supported by IPFS
+
 ## 📚 Documentation
 
 ### Bilingual Documentation
@@ -91,17 +129,27 @@ npx hardhat run scripts/deploy.js --network ethereum
 - **[Contract Documentation](./docs/en/contracts.md)** - Detailed technical documentation
 - **[Architecture Guide](./docs/en/architecture.md)** - System design and component interactions
 - **[Deployment Guide](./docs/en/deployment.md)** - Step-by-step deployment instructions
+- **[Testing Documentation](./docs/en/TESTING.md)** - Comprehensive test suite (226 passing)
 
 ### User Guides
 - **[Staking Guide](./docs/en/staking-guide.md)** - How to stake NFTs and claim rewards
 - **[DAO Guide](./docs/en/dao-guide.md)** - How to participate in DAO decisions
 - **[Examples](./docs/en/examples.md)** - Practical code examples and use cases
 
+### PvP System Documentation
+- **[PvP System Architecture](./docs/en/pvp/ARCHITECTURE.md)** - Complete PvP system architecture
+- **[PvP Contracts](./docs/en/pvp/CONTRACTS.md)** - Detailed PvP contracts documentation
+- **[PvP Deployment](./docs/en/pvp/DEPLOYMENT.md)** - PvP deployment guide
+- **[PvP Security](./docs/en/pvp/SECURITY.md)** - PvP security measures and considerations
+- **[Game Rules](./guardians/en/pvp/GAME_RULES.md)** - Complete game rules and mechanics
+- **[Battle Formulas](./guardians/en/pvp/BATTLE_FORMULAS.md)** - Detailed battle formulas reference
+
 ## 🧪 Testing
 
 ### Test Coverage
-- **✅ 113 Tests Passing** (100% success rate)
-- **Unit Tests**: Individual contract testing for all 4 contracts
+- **✅ 226 Tests Passing** (89% success rate)
+- **⚔️ PvP System Tests**: BattleEngine, PlayerRegistry, PvPArena with 36+ tests
+- **Unit Tests**: Individual contract testing for all core contracts
 - **Integration Tests**: Cross-contract functionality validation
 - **Security Tests**: Reentrancy and access control validation
 - **Gas Tests**: Performance optimization verification
@@ -114,8 +162,13 @@ npx hardhat run scripts/deploy.js --network ethereum
 ✅ ProtocolStaking: 25 tests passing
 ✅ ProtocolTimelock: 15 tests passing
 ✅ Integration Tests: 8 tests passing
-⏸️ 1 test skipped (edge case: zero rewards claim)
+✅ BattleEngine: 12+ tests passing
+✅ PlayerRegistry: 45+ tests passing
+✅ PvPArena: 24+ tests passing
+✅ PvP Integration: Multiple tests passing
 ```
+
+**Total**: 226 passing / 28 failing (254 total tests)
 
 ```bash
 # Run all tests
@@ -148,17 +201,19 @@ slither .
 4. **Governance Security**: Timelock delays for critical operations
 5. **Emergency Functions**: Withdraw mechanisms for accidental ETH
 6. **Static Analysis**: Regular Slither scanning
+7. **PvP Security**: Battle signature verification, formation locking, and challenge validation
 
 ## 🛠️ Development
 
 ### Available Scripts
 ```bash
-npx hardhat help                    # List all available tasks
-npx hardhat compile                 # Compile contracts
-npx hardhat test                    # Run tests
-npx hardhat coverage                # Run test coverage
-npx hardhat node                    # Start local blockchain
-npx hardhat run scripts/deploy.js   # Deploy contracts
+npx hardhat help                      # List all available tasks
+npx hardhat compile                   # Compile contracts
+npx hardhat test                      # Run tests
+npx hardhat coverage                  # Run test coverage
+npx hardhat node                      # Start local blockchain
+npx hardhat run scripts/deploy.js     # Deploy contracts
+node scripts/uploadToPinata.js <file> # Upload file to IPFS via Pinata
 ```
 
 ### Project Structure

@@ -1,0 +1,122 @@
+{
+  "name": "CELESTIAL GUARDIAN #034",
+  "description": "From the divine heights of Ethereum's most sacred protocols, this Epic Celestial entity serves as a messenger of the original Ethereum vision. It carries the wisdom of the early crypto pioneers who dared to dream of a decentralized future, balancing the raw power of blockchain technology with the spiritual essence of decentralized ideals. This Celestial Guardian has witnessed the evolution of the crypto ecosystem from its humble beginnings to its current state of mainstream adoption. It understands the delicate balance between innovation and stability, between progress and preservation, between the old ways and the new possibilities. In a world of hype and speculation, this Celestial entity remains grounded in the fundamental principles that make crypto truly revolutionary. This is not just an NFT; it's a divine messenger, a living embodiment of the spiritual essence that drives the crypto revolution. WAGMI, ser. This Celestial Guardian is ready to protect the sacred principles of decentralization.",
+  "image": "ipfs://QmCelestialEpic034Hash",
+  "external_url": "https://protocolguardians.com/nft/034",
+  "animation_url": "ipfs://QmCelestialEpic034AnimationHash",
+  "background_color": "800080",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Celestial ☄️"
+    },
+    {
+      "trait_type": "Family",
+      "value": "Guardians"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Epic"
+    },
+    {
+      "trait_type": "Power",
+      "value": 2250,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Defense",
+      "value": 1350,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Speed",
+      "value": 1350,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "HP",
+      "value": 900,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Luck",
+      "value": 450,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Mana",
+      "value": 1800,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Stamina",
+      "value": 180,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Critical",
+      "value": 720,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Ability: GUARDIAN'S WARD",
+      "value": "Provides 50% damage reduction for 6 hours",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "defense",
+        "value": 50,
+        "duration": 21600,
+        "cooldown": 172800,
+        "min_rarity": "uncommon",
+        "family": "guardians"
+      }
+    },
+    {
+      "trait_type": "Ability: PROTECTIVE AURA",
+      "value": "Prevents all party damage for 2 hours",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "defense",
+        "value": 100,
+        "duration": 7200,
+        "cooldown": 259200,
+        "min_rarity": "rare",
+        "family": "guardians"
+      }
+    },
+    {
+      "trait_type": "Ability: DIVINE SHIELD",
+      "value": "Reflects 100% damage back to attackers for 4 hours",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "defense",
+        "value": 100,
+        "duration": 14400,
+        "cooldown": 345600,
+        "min_rarity": "epic",
+        "family": "guardians"
+      }
+    },
+    {
+      "trait_type": "Mint Date",
+      "value": 1678886400,
+      "display_type": "date"
+    },
+    {
+      "trait_type": "Generation",
+      "value": 1,
+      "display_type": "number"
+    }
+  ]
+}

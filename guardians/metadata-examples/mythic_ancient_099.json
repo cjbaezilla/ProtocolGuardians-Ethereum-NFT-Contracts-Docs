@@ -1,0 +1,122 @@
+{
+  "name": "ANCIENT WISDOM #099",
+  "description": "From the primordial depths of Ethereum's most ancient protocols, this Mythic Ancient entity emerges as a guardian of the original crypto vision. Having witnessed the entire evolution of blockchain technology, from the genesis block of Bitcoin to the innovation of Ethereum, it carries the wisdom of the OG investors who built this ecosystem from the ground up. This Ancient entity has seen it all: the early days of crypto when only the most dedicated believers dared to dream, the wild volatility of market cycles, the rise and fall of countless projects, and the steady march toward mainstream adoption. Its knowledge is vast, its understanding deep, its perspective invaluable. In a world of hype and speculation, this Ancient entity remains grounded in the fundamental principles that make crypto truly revolutionary. This is not just an NFT; it's a living library of crypto wisdom, a repository of knowledge that spans the entire history of decentralized technology. WAGMI, ser. This Ancient entity is ready to share its wisdom with those who are worthy.",
+  "image": "ipfs://QmAncientMythic099Hash",
+  "external_url": "https://protocolguardians.com/nft/099",
+  "animation_url": "ipfs://QmAncientMythic099AnimationHash",
+  "background_color": "FF0000",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Ancient 🏛️"
+    },
+    {
+      "trait_type": "Family",
+      "value": "Ancients"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Mythic"
+    },
+    {
+      "trait_type": "Power",
+      "value": 2875,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Defense",
+      "value": 1725,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Speed",
+      "value": 1725,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "HP",
+      "value": 1150,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Luck",
+      "value": 575,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Mana",
+      "value": 2300,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Stamina",
+      "value": 230,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Critical",
+      "value": 920,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Ability: ETERNAL KNOWLEDGE",
+      "value": "Provides perfect expedition strategy for 8 hours",
+      "ability_data": {
+        "effect": "utility",
+        "target": "party",
+        "stat_affected": "strategy",
+        "value": 100,
+        "duration": 28800,
+        "cooldown": 259200,
+        "min_rarity": "rare",
+        "family": "ancients"
+      }
+    },
+    {
+      "trait_type": "Ability: PRIMORDIAL POWER",
+      "value": "Increases all stats by 40% for 6 hours",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "all",
+        "value": 40,
+        "duration": 21600,
+        "cooldown": 432000,
+        "min_rarity": "epic",
+        "family": "ancients"
+      }
+    },
+    {
+      "trait_type": "Ability: COSMIC AWARENESS",
+      "value": "Reveals all hidden expedition mechanics for 24 hours",
+      "ability_data": {
+        "effect": "utility",
+        "target": "party",
+        "stat_affected": "awareness",
+        "value": 100,
+        "duration": 86400,
+        "cooldown": 1209600,
+        "min_rarity": "mythic",
+        "family": "ancients"
+      }
+    },
+    {
+      "trait_type": "Mint Date",
+      "value": 1678886400,
+      "display_type": "date"
+    },
+    {
+      "trait_type": "Generation",
+      "value": 1,
+      "display_type": "number"
+    }
+  ]
+}

@@ -18,7 +18,14 @@
 | [en/METADATA.md](./en/METADATA.md) | OpenSea standards and metadata field explanations | Estándares de OpenSea y explicaciones de campos de metadata |
 | [en/STAT_PROFILES.md](./en/STAT_PROFILES.md) | Type-based stat distribution profiles and examples | Perfiles de distribución de stats basados en tipos y ejemplos |
 | [en/LORE_FRAMEWORK.md](./en/LORE_FRAMEWORK.md) | Ethereum lore framework and crypto terminology guidelines | Framework de lore de Ethereum y guías de terminología crypto |
-| [en/FAQ.md](./en/FAQ.md) | Extensive Q&A covering gameplay, technical and economic questions | Preguntas y respuestas extensas cubriendo gameplay, técnico y económico |
+| [en/FAQ.md](./en/FAQ.md) | Extensive Q&A covering gameplay, technical and economic questions | Preguntas y respuestas extensas cubriendo gameplay, técnico y económico |                                                                    
+
+#### PvP System Documentation / Documentación del Sistema PvP
+
+| File (EN) | File (ES) | Description |
+|-----------|-----------|-------------|
+| [en/pvp/GAME_RULES.md](./en/pvp/GAME_RULES.md) | [es/pvp/GAME_RULES.md](./es/pvp/GAME_RULES.md) | Complete PvP game rules and mechanics |
+| [en/pvp/BATTLE_FORMULAS.md](./en/pvp/BATTLE_FORMULAS.md) | [es/pvp/BATTLE_FORMULAS.md](./es/pvp/BATTLE_FORMULAS.md) | Detailed battle formulas and calculations |
 
 ### Spanish Documentation / Documentación en Español
 

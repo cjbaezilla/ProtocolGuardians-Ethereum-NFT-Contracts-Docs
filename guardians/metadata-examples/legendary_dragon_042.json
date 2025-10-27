@@ -1,0 +1,122 @@
+{
+  "name": "DRAGON LORD #042",
+  "description": "From the deepest vaults of Ethereum's digital treasury, this Legendary Dragon emerges as a guardian of ancient wealth and wisdom. Having accumulated vast knowledge through eons of blockchain evolution, it stands as a testament to the power of diamond hands and unwavering conviction. This Dragon Lord has witnessed the birth of Bitcoin, the rise of Ethereum, and the evolution of blockchain technology. Its scales shimmer with the golden light of accumulated treasures, each one representing a successful trade, a wise investment, or a moment of market clarity. In the volatile seas of crypto markets, this Dragon has learned to weather any storm, emerging stronger with each cycle. Its very presence commands respect among the digital realm's inhabitants, for it carries the wisdom of the OG investors who built this ecosystem from the ground up. This is not just an NFT; it's a piece of digital history, a high-value asset that represents the pinnacle of what's possible when you truly understand the power of decentralized technology. WAGMI, ser. This Dragon Lord is ready to lead its followers to the moon.",
+  "image": "ipfs://QmDragonLegendary042Hash",
+  "external_url": "https://protocolguardians.com/nft/042",
+  "animation_url": "ipfs://QmDragonLegendary042AnimationHash",
+  "background_color": "FFD700",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Dragon 🐉"
+    },
+    {
+      "trait_type": "Family",
+      "value": "Dragons"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Power",
+      "value": 3150,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Defense",
+      "value": 1575,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Speed",
+      "value": 1050,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "HP",
+      "value": 2625,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Luck",
+      "value": 420,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Mana",
+      "value": 525,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Stamina",
+      "value": 315,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Critical",
+      "value": 840,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Ability: DRAGON'S FURY",
+      "value": "Increases Power by 50% and adds fire damage for 4 hours",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "power",
+        "value": 50,
+        "duration": 14400,
+        "cooldown": 172800,
+        "min_rarity": "uncommon",
+        "family": "dragons"
+      }
+    },
+    {
+      "trait_type": "Ability: ANCIENT WISDOM",
+      "value": "Increases all stats by 20% and provides strategic insights",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "all",
+        "value": 20,
+        "duration": 21600,
+        "cooldown": 259200,
+        "min_rarity": "rare",
+        "family": "dragons"
+      }
+    },
+    {
+      "trait_type": "Ability: HOARD MASTER",
+      "value": "Increases all rewards by 100% for next 3 expeditions",
+      "ability_data": {
+        "effect": "utility",
+        "target": "party",
+        "stat_affected": "rewards",
+        "value": 100,
+        "duration": 259200,
+        "cooldown": 864000,
+        "min_rarity": "legendary",
+        "family": "dragons"
+      }
+    },
+    {
+      "trait_type": "Mint Date",
+      "value": 1678886400,
+      "display_type": "date"
+    },
+    {
+      "trait_type": "Generation",
+      "value": 1,
+      "display_type": "number"
+    }
+  ]
+}

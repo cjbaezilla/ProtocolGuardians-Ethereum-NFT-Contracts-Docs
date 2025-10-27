@@ -19,25 +19,93 @@ Este documento proporciona un análisis de seguridad completo del ecosistema de 
 
 ### Problemas Corregidos ✅
 
-#### 1. Variable Shadowing (Protocol Guardians.sol)
-**Problema**: Variable local `baseURI` en función `tokenURI()` hacía sombra a la función pública `baseURI()`.
+#### 1. Vulnerabilidades de Reentrancy (PvPArena.sol)
+**Problema**: Las llamadas externas se hacían antes de las actualizaciones de estado en las funciones de desafío, creando riesgos de reentrancy.
+
+**Corrección Implementada**: Aplicado el patrón Checks-Effects-Interactions:
+```solidity
+// CHECKS: Validar entradas primero
+require(challengerIsRegistered, "PvPArena: Challenger not registered");
+require(opponentIsRegistered, "PvPArena: Opponent not registered");
+
+// EFFECTS: Actualizar variables de estado primero
+challenges[_challengeCounter] = Challenge({...});
+playerChallenges[msg.sender].push(_challengeCounter);
+playerChallenges[opponentAddress].push(_challengeCounter);
+_challengeCounter++;
+
+// INTERACTIONS: Llamadas externas al final
+registry.setFormationInUse(msg.sender, battleType, true);
+token.transferFrom(msg.sender, address(this), wagerAmount);
+```
+
+#### 2. Variable Local No Inicializada (BattleEngine.sol)
+**Problema**: La variable `lowest` en `_getLowestHPAlive()` no estaba inicializada antes del uso.
 
 **Corrección Implementada**:
 ```solidity
-// Antes: Variable shadowing
-function tokenURI(uint256 tokenId) public view override returns (string memory) {
-    string memory baseURI = _baseURI(); // Shadowing con función baseURI()
-    return string(abi.encodePacked(baseURI, _toString(tokenId)));
-}
-
-// Después: Nombrado claro de variables
-function tokenURI(uint256 tokenId) public view override returns (string memory) {
-    string memory baseTokenURI = _baseURI(); // Sin shadowing
-    return string(abi.encodePacked(baseTokenURI, _toString(tokenId)));
+function _getLowestHPAlive(BattleCard[] memory team) internal pure returns (BattleCard memory) {
+    BattleCard memory lowest = BattleCard({
+        stats: CardStats({power: 0, defense: 0, speed: 0, hp: 0, luck: 0, critical: 0, cardType: 0}),
+        currentHP: 0,
+        index: 0,
+        isAlive: false
+    });
+    bool found = false;
+    // ... resto de la función
 }
 ```
 
-#### 2. Llamadas Externas en Bucles (ProtocolStaking.sol)
+#### 3. Variables de Estado No Inmutables (PlayerRegistry.sol, PvPArena.sol)
+**Problema**: Variables que nunca cambian no estaban declaradas como inmutables.
+
+**Corrección Implementada**:
+```solidity
+// PlayerRegistry.sol
+IProtocolGuardians public immutable nftContract;
+
+// PvPArena.sol
+address public immutable playerRegistryAddress;
+address public immutable battleEngineAddress;
+```
+
+#### 4. Variable Shadowing (MockProtocolGuardians.sol)
+**Problema**: Los parámetros locales `owner` hacían sombra a la función heredada `owner()`.
+
+**Corrección Implementada**:
+```solidity
+// Antes: Shadowing
+function ownerOf(uint256 tokenId) public view override returns (address) {
+    address owner = _owners[tokenId]; // Hace sombra a Ownable.owner()
+    return owner;
+}
+
+// Después: Nombrado claro
+function ownerOf(uint256 tokenId) public view override returns (address) {
+    address tokenOwner = _owners[tokenId]; // Sin shadowing
+    return tokenOwner;
+}
+```
+
+#### 5. Operaciones Costosas en Bucles (ProtocolGuardians.sol, MockProtocolGuardians.sol, ProtocolStaking.sol)
+**Problema**: Operaciones costosas como `_nextTokenId++` y `delete` en bucles.
+
+**Corrección Implementada**: Optimización de operaciones en lote:
+```solidity
+// Antes: Múltiples operaciones SLOAD/SSTORE
+for (uint256 i = 0; i < amount; i++) {
+    tokenIds[i] = _nextTokenId++; // Incremento costoso en bucle
+}
+
+// Después: Incremento en lote
+uint256 startTokenId = _nextTokenId;
+_nextTokenId += amount;
+for (uint256 i = 0; i < amount; i++) {
+    uint256 tokenId = startTokenId + i; // Cálculo único
+}
+```
+
+#### 6. Bloqueo de Ether en Contrato (Protocol Guardians.sol)
 **Problema**: Slither detectó llamadas externas en bucles que pueden causar problemas de gas y DoS.
 
 **Corrección Implementada**: Reorganización del código siguiendo el patrón Checks-Effects-Interactions:

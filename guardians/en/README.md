@@ -59,7 +59,11 @@ Guardians are NFT entities that exist within the Ethereum ecosystem, each with u
 - **[Boilerplate](../metadata/metadata_boilerplate.json)** - Complete metadata example for GALACTIC GUARDIAN #007
 
 ### Support
-- **[FAQ](FAQ.md)** - Extensive Q&A covering gameplay, technical, and economic questions
+- **[FAQ](FAQ.md)** - Extensive Q&A covering gameplay, technical, and economic questions                                                                        
+
+### ⚔️ PvP System
+- **[Game Rules](pvp/GAME_RULES.md)** - Complete PvP game rules and mechanics
+- **[Battle Formulas](pvp/BATTLE_FORMULAS.md)** - Detailed battle formulas and calculations
 
 ## 🎮 Game Mechanics Overview
 

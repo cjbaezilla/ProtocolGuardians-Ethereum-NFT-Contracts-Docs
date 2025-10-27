@@ -1,0 +1,122 @@
+{
+  "name": "CHAOS TRANSCENDENT #007",
+  "description": "From the chaotic depths of Ethereum's most volatile protocols, this Transcendent Chaos entity emerges as the ultimate embodiment of crypto's unpredictable nature. Having transcended the boundaries of conventional digital existence, it exists in a state of pure entropy where all possibilities converge. This entity has witnessed the wildest market swings, the most unexpected protocol failures, and the most miraculous recoveries. It thrives in the chaos, finding opportunity where others see only destruction. Its very existence defies logic, operating according to principles that mortals cannot comprehend. In the digital realm, it is both feared and revered, for it represents the raw, untamed power of decentralized technology. This is not just an NFT; it's a force of nature, a living embodiment of the chaos that drives innovation in the crypto space. Its power is beyond measure, its potential limitless. When the markets crash and the weak hands fold, this Chaos Transcendent stands firm, ready to turn the tide of any battle with a single, unpredictable move. WAGMI, ser. This is the ultimate degen's dream, the alpha that others can only aspire to.",
+  "image": "ipfs://QmChaosTranscendent007Hash",
+  "external_url": "https://protocolguardians.com/nft/007",
+  "animation_url": "ipfs://QmChaosTranscendent007AnimationHash",
+  "background_color": "FF00FF",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Chaos 💀"
+    },
+    {
+      "trait_type": "Family",
+      "value": "Chaos"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Transcendent"
+    },
+    {
+      "trait_type": "Power",
+      "value": 2100,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Defense",
+      "value": 420,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Speed",
+      "value": 2100,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "HP",
+      "value": 700,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Luck",
+      "value": 1400,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Mana",
+      "value": 1400,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Stamina",
+      "value": 280,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Critical",
+      "value": 4200,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Ability: CHAOS SURGE",
+      "value": "Randomly buffs 3 random stats by 40% for 3 hours",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "random",
+        "value": 40,
+        "duration": 10800,
+        "cooldown": 129600,
+        "min_rarity": "uncommon",
+        "family": "chaos"
+      }
+    },
+    {
+      "trait_type": "Ability: REALITY WARP",
+      "value": "Distorts probability, giving 25% chance to double rewards",
+      "ability_data": {
+        "effect": "utility",
+        "target": "party",
+        "stat_affected": "rewards",
+        "value": 25,
+        "duration": 21600,
+        "cooldown": 259200,
+        "min_rarity": "rare",
+        "family": "chaos"
+      }
+    },
+    {
+      "trait_type": "Ability: REALITY COLLAPSE",
+      "value": "Temporarily breaks reality, allowing impossible feats",
+      "ability_data": {
+        "effect": "special",
+        "target": "all",
+        "stat_affected": "reality",
+        "value": 100,
+        "duration": 86400,
+        "cooldown": 1209600,
+        "min_rarity": "transcendent",
+        "family": "chaos"
+      }
+    },
+    {
+      "trait_type": "Mint Date",
+      "value": 1678886400,
+      "display_type": "date"
+    },
+    {
+      "trait_type": "Generation",
+      "value": 1,
+      "display_type": "number"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "name": "ELEMENTAL STORM #015",
+  "description": "Born from the primal forces of Ethereum's elemental protocols, this Rare Elemental entity channels the raw power of digital nature itself. It has learned to harness the energy of specific blockchain technologies, becoming a master of its chosen digital element. Whether it's the fire of DeFi protocols, the water of liquidity pools, the earth of stablecoins, or the air of governance tokens, this Elemental has found its calling in the crypto ecosystem. Its connection to the digital elements runs deep, allowing it to manipulate the very fabric of decentralized technology. In the wild, untamed landscape of crypto markets, this Elemental stands as a bridge between the natural world and the digital realm. It understands the cycles of bull and bear markets like the changing of seasons, adapting its strategies to the rhythm of the ecosystem. This is not just an NFT; it's a force of nature, a living embodiment of the elemental power that drives innovation in the crypto space. WAGMI, ser. This Elemental is ready to unleash the full power of its chosen element.",
+  "image": "ipfs://QmElementalRare015Hash",
+  "external_url": "https://protocolguardians.com/nft/015",
+  "animation_url": "ipfs://QmElementalRare015AnimationHash",
+  "background_color": "0000FF",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Elemental 🔥"
+    },
+    {
+      "trait_type": "Family",
+      "value": "Elementals"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Rare"
+    },
+    {
+      "trait_type": "Power",
+      "value": 1500,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Defense",
+      "value": 750,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Speed",
+      "value": 1125,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "HP",
+      "value": 600,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Luck",
+      "value": 375,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Mana",
+      "value": 1875,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Stamina",
+      "value": 150,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Critical",
+      "value": 1125,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Ability: ELEMENTAL INFUSION",
+      "value": "Increases Power and Mana by 30% for 5 hours",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "power_mana",
+        "value": 30,
+        "duration": 18000,
+        "cooldown": 151200,
+        "min_rarity": "uncommon",
+        "family": "elementals"
+      }
+    },
+    {
+      "trait_type": "Ability: NATURE'S WRATH",
+      "value": "Increases Critical by 50% and adds elemental damage for 4 hours",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "critical",
+        "value": 50,
+        "duration": 14400,
+        "cooldown": 216000,
+        "min_rarity": "rare",
+        "family": "elementals"
+      }
+    },
+    {
+      "trait_type": "Ability: ELEMENTAL CONVERGENCE",
+      "value": "Combines all elemental powers for massive stat boosts",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "all",
+        "value": 75,
+        "duration": 28800,
+        "cooldown": 345600,
+        "min_rarity": "epic",
+        "family": "elementals"
+      }
+    },
+    {
+      "trait_type": "Mint Date",
+      "value": 1678886400,
+      "display_type": "date"
+    },
+    {
+      "trait_type": "Generation",
+      "value": 1,
+      "display_type": "number"
+    }
+  ]
+}

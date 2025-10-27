@@ -19,21 +19,93 @@ This document provides a comprehensive security analysis of the Protocol Guardia
 
 ### Issues Fixed ✅
 
-#### 1. Contract Locking Ether (Protocol Guardians.sol)
-**Issue**: The NFT contract had payable functions but no mechanism to withdraw accidentally sent ETH.
+#### 1. Reentrancy Vulnerabilities (PvPArena.sol)
+**Issue**: External calls were made before state updates in challenge functions, creating reentrancy risks.
+
+**Fix Implemented**: Applied Checks-Effects-Interactions pattern:
+```solidity
+// CHECKS: Validate inputs first
+require(challengerIsRegistered, "PvPArena: Challenger not registered");
+require(opponentIsRegistered, "PvPArena: Opponent not registered");
+
+// EFFECTS: Update state variables first
+challenges[_challengeCounter] = Challenge({...});
+playerChallenges[msg.sender].push(_challengeCounter);
+playerChallenges[opponentAddress].push(_challengeCounter);
+_challengeCounter++;
+
+// INTERACTIONS: External calls last
+registry.setFormationInUse(msg.sender, battleType, true);
+token.transferFrom(msg.sender, address(this), wagerAmount);
+```
+
+#### 2. Uninitialized Local Variable (BattleEngine.sol)
+**Issue**: Variable `lowest` in `_getLowestHPAlive()` was not initialized before use.
 
 **Fix Implemented**:
 ```solidity
-function withdraw() external onlyOwner {
-    uint256 balance = address(this).balance;
-    require(balance > 0, "Protocol Guardians: No ETH to withdraw");
-    
-    // Use OpenZeppelin's Address.sendValue() for safer ETH transfer
-    Address.sendValue(payable(owner()), balance);
+function _getLowestHPAlive(BattleCard[] memory team) internal pure returns (BattleCard memory) {
+    BattleCard memory lowest = BattleCard({
+        stats: CardStats({power: 0, defense: 0, speed: 0, hp: 0, luck: 0, critical: 0, cardType: 0}),
+        currentHP: 0,
+        index: 0,
+        isAlive: false
+    });
+    bool found = false;
+    // ... rest of function
 }
 ```
 
-#### 2. External Calls in Loops (ProtocolStaking.sol)
+#### 3. State Variables Not Immutable (PlayerRegistry.sol, PvPArena.sol)
+**Issue**: Variables that never change were not declared as immutable.
+
+**Fix Implemented**:
+```solidity
+// PlayerRegistry.sol
+IProtocolGuardians public immutable nftContract;
+
+// PvPArena.sol
+address public immutable playerRegistryAddress;
+address public immutable battleEngineAddress;
+```
+
+#### 4. Variable Shadowing (MockProtocolGuardians.sol)
+**Issue**: Local parameters `owner` shadowed inherited function `owner()`.
+
+**Fix Implemented**:
+```solidity
+// Before: Shadowing
+function ownerOf(uint256 tokenId) public view override returns (address) {
+    address owner = _owners[tokenId]; // Shadows Ownable.owner()
+    return owner;
+}
+
+// After: Clear naming
+function ownerOf(uint256 tokenId) public view override returns (address) {
+    address tokenOwner = _owners[tokenId]; // No shadowing
+    return tokenOwner;
+}
+```
+
+#### 5. Costly Operations in Loops (ProtocolGuardians.sol, MockProtocolGuardians.sol, ProtocolStaking.sol)
+**Issue**: Expensive operations like `_nextTokenId++` and `delete` in loops.
+
+**Fix Implemented**: Batch operations optimization:
+```solidity
+// Before: Multiple SLOAD/SSTORE operations
+for (uint256 i = 0; i < amount; i++) {
+    tokenIds[i] = _nextTokenId++; // Expensive increment in loop
+}
+
+// After: Batch increment
+uint256 startTokenId = _nextTokenId;
+_nextTokenId += amount;
+for (uint256 i = 0; i < amount; i++) {
+    uint256 tokenId = startTokenId + i; // Single calculation
+}
+```
+
+#### 6. Contract Locking Ether (Protocol Guardians.sol)
 **Issue**: Slither detected external calls in loops that can cause gas and DoS issues.
 
 **Fix Implemented**: Code reorganization following the Checks-Effects-Interactions pattern:

@@ -1,0 +1,122 @@
+{
+  "name": "VOID MASTER #066",
+  "description": "From the mysterious depths between blockchain networks, this Legendary Void entity exists in the spaces where digital reality bends and breaks. It has learned to manipulate the fundamental nature of existence itself, understanding the void that exists between transactions, between blocks, between the moments when reality shifts. This Void Master has witnessed the birth and death of countless protocols, learning to exist in the spaces between success and failure, between profit and loss, between the known and the unknown. Its power is beyond comprehension, its abilities defying the laws of conventional digital existence. In a world of certainty and predictability, this Void entity thrives in the uncertainty, finding opportunity in the spaces that others fear to explore. This is not just an NFT; it's a force of pure entropy, a living embodiment of the void that exists at the heart of all digital systems. WAGMI, ser. This Void Master is ready to reshape reality itself.",
+  "image": "ipfs://QmVoidLegendary066Hash",
+  "external_url": "https://protocolguardians.com/nft/066",
+  "animation_url": "ipfs://QmVoidLegendary066AnimationHash",
+  "background_color": "FFD700",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Void 🌌"
+    },
+    {
+      "trait_type": "Family",
+      "value": "Void"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Legendary"
+    },
+    {
+      "trait_type": "Power",
+      "value": 1575,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Defense",
+      "value": 315,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Speed",
+      "value": 1575,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "HP",
+      "value": 525,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Luck",
+      "value": 1050,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Mana",
+      "value": 1050,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Stamina",
+      "value": 210,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Critical",
+      "value": 2520,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Ability: VOID TOUCH",
+      "value": "Nullifies enemy abilities and increases party Luck by 50%",
+      "ability_data": {
+        "effect": "debuff",
+        "target": "enemy",
+        "stat_affected": "abilities",
+        "value": 50,
+        "duration": 14400,
+        "cooldown": 216000,
+        "min_rarity": "rare",
+        "family": "void"
+      }
+    },
+    {
+      "trait_type": "Ability: ENTROPY DRAIN",
+      "value": "Steals enemy stats and adds them to party for 4 hours",
+      "ability_data": {
+        "effect": "special",
+        "target": "enemy",
+        "stat_affected": "all",
+        "value": 100,
+        "duration": 14400,
+        "cooldown": 345600,
+        "min_rarity": "epic",
+        "family": "void"
+      }
+    },
+    {
+      "trait_type": "Ability: REALITY ERASURE",
+      "value": "Temporarily removes enemies from existence",
+      "ability_data": {
+        "effect": "special",
+        "target": "enemy",
+        "stat_affected": "existence",
+        "value": 100,
+        "duration": 21600,
+        "cooldown": 864000,
+        "min_rarity": "legendary",
+        "family": "void"
+      }
+    },
+    {
+      "trait_type": "Mint Date",
+      "value": 1678886400,
+      "display_type": "date"
+    },
+    {
+      "trait_type": "Generation",
+      "value": 1,
+      "display_type": "number"
+    }
+  ]
+}

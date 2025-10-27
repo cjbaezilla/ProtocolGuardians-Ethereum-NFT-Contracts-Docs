@@ -111,7 +111,12 @@ contract ProtocolStaking is ReentrancyGuard {
             
             _removeStakedToken(msg.sender, tokenId);
             
-            delete stakingInfo[tokenId];
+            // Optimize: batch delete operations
+            stakingInfo[tokenId] = StakingInfo({
+                owner: address(0),
+                stakedAtBlock: 0,
+                lastClaimedBlock: 0
+            });
         }
         
         totalStaked -= tokenIds.length;

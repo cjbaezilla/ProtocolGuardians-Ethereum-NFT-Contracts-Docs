@@ -12,11 +12,13 @@
     "@openzeppelin/contracts": "^5.4.0",
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
+    "axios": "^1.12.2",
     "chai": "^4.5.0",
     "dotenv": "^17.2.3",
     "ethers": "^6.15.0",
     "hardhat": "^2.26.3",
     "hardhat-gas-reporter": "^2.3.0",
+    "pinata": "^2.5.1",
     "solady": "^0.1.26",
     "solidity-coverage": "^0.8.16",
     "typechain": "^8.3.2"

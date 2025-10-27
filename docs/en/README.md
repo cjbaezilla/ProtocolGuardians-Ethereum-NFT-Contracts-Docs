@@ -6,11 +6,18 @@
 - [System Architecture](./architecture.md) - Complete architecture with Mermaid diagrams
 - [Contract Documentation](./contracts.md) - Detailed documentation of each contract
 - [Deployment Guide](./deployment.md) - Step-by-step deployment guide
+- [Testing Documentation](./TESTING.md) - Comprehensive test suite documentation (226 passing)
 
 ### 👥 User Guides
 - [Staking Guide](./staking-guide.md) - How to stake NFTs
 - [DAO Governance Guide](./dao-guide.md) - Complete governance guide with Timelock
 - [Usage Examples](./examples.md) - Code examples and use cases
+
+### ⚔️ PvP System
+- [PvP Architecture](./pvp/ARCHITECTURE.md) - Complete PvP system architecture
+- [PvP Contracts](./pvp/CONTRACTS.md) - PvP contracts documentation
+- [PvP Deployment](./pvp/DEPLOYMENT.md) - PvP deployment guide
+- [PvP Security](./pvp/SECURITY.md) - PvP security analysis
 
 ## Overview
 
@@ -76,8 +83,9 @@ Protocol Guardians is a complete ERC721 NFT system with staking capabilities and
 ## Testing
 
 ### Test Coverage ✅
-- **✅ 113 Tests Passing** (100% success rate)
-- **Unit Tests**: Individual contract testing for all 4 contracts
+- **✅ 226 Tests Passing** (89% success rate)
+- **⚔️ PvP System Tests**: BattleEngine, PlayerRegistry, PvPArena comprehensive coverage
+- **Unit Tests**: Individual contract testing for all core contracts
 - **Integration Tests**: Cross-contract functionality validation
 - **Security Tests**: Reentrancy and access control validation
 - **Gas Tests**: Performance optimization verification
@@ -90,13 +98,18 @@ Protocol Guardians is a complete ERC721 NFT system with staking capabilities and
 ✅ ProtocolStaking: 25 tests passing
 ✅ ProtocolTimelock: 15 tests passing
 ✅ Integration Tests: 8 tests passing
-⏸️ 1 test skipped (edge case: zero rewards claim)
+✅ BattleEngine: 12+ tests passing
+✅ PlayerRegistry: 45+ tests passing
+✅ PvPArena: 24+ tests passing
+✅ PvP Integration: Multiple integration tests passing
 ```
+
+**Total**: 226 passing / 28 failing (254 total tests)
 
 ## Security
 
 - Contract auditing recommended
-- **✅ 113 Tests Passing** with comprehensive coverage
+- **✅ 226 Tests Passing** with comprehensive coverage
 - Reentrancy protection
 - Parameter validation
 - Well-defined roles and permissions

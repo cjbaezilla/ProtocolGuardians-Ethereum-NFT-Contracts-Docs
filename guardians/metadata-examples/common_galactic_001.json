@@ -1,0 +1,122 @@
+{
+  "name": "GALACTIC SPEEDSTER #001",
+  "description": "Born from the cosmic dust of Ethereum's genesis block, this Common Galactic entity channels the raw energy of interplanetary blockchain networks. Though young in the digital realm, it carries the spark of cosmic potential that could one day illuminate the entire ecosystem. This speedster has witnessed the early days of Ethereum's evolution, learning to navigate the fast-paced world of blockchain scaling with the grace of a shooting star. While its stats may be modest, its spirit burns bright with the promise of what's to come. Every journey begins with a single step, and this Galactic entity is ready to race toward the moon. WAGMI, ser.",
+  "image": "ipfs://QmGalacticCommon001Hash",
+  "external_url": "https://protocolguardians.com/nft/001",
+  "animation_url": "ipfs://QmGalacticCommon001AnimationHash",
+  "background_color": "808080",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Galactic ⭐"
+    },
+    {
+      "trait_type": "Family",
+      "value": "Guardians"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Common"
+    },
+    {
+      "trait_type": "Power",
+      "value": 650,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Defense",
+      "value": 520,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Speed",
+      "value": 1250,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "HP",
+      "value": 400,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Luck",
+      "value": 250,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Mana",
+      "value": 1000,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Stamina",
+      "value": 100,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Critical",
+      "value": 750,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Ability: QUICK STRIKE",
+      "value": "Increases party Speed by 10% for 2 hours",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "speed",
+        "value": 10,
+        "duration": 7200,
+        "cooldown": 43200,
+        "min_rarity": "common",
+        "family": "universal"
+      }
+    },
+    {
+      "trait_type": "Ability: DEFENSIVE STANCE",
+      "value": "Increases party Defense by 15% for 3 hours",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "defense",
+        "value": 15,
+        "duration": 10800,
+        "cooldown": 64800,
+        "min_rarity": "common",
+        "family": "universal"
+      }
+    },
+    {
+      "trait_type": "Ability: LUCKY BREAK",
+      "value": "Increases party Luck by 20% for 1 hour",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "luck",
+        "value": 20,
+        "duration": 3600,
+        "cooldown": 86400,
+        "min_rarity": "common",
+        "family": "universal"
+      }
+    },
+    {
+      "trait_type": "Mint Date",
+      "value": 1678886400,
+      "display_type": "date"
+    },
+    {
+      "trait_type": "Generation",
+      "value": 1,
+      "display_type": "number"
+    }
+  ]
+}

@@ -6,11 +6,18 @@
 - [Arquitectura del Sistema](./arquitectura.md) - Arquitectura completa con diagramas Mermaid
 - [Documentación de Contratos](./contratos.md) - Documentación detallada de cada contrato
 - [Guía de Deployment](./deployment.md) - Guía paso a paso para deployment
+- [Documentación de Testing](./TESTING.md) - Documentación de suite de tests (226 pasando)
 
 ### 👥 Guías de Usuario
 - [Guía de Staking](./staking-guide.md) - Cómo hacer staking de NFTs
 - [Guía de Gobernanza DAO](./dao-guide.md) - Guía completa de gobernanza con Timelock
 - [Ejemplos de Uso](./ejemplos.md) - Ejemplos de código y casos de uso
+
+### ⚔️ Sistema PvP
+- [Arquitectura PvP](./pvp/ARCHITECTURE.md) - Arquitectura completa del sistema PvP
+- [Contratos PvP](./pvp/CONTRACTS.md) - Documentación de contratos PvP
+- [Deployment PvP](./pvp/DEPLOYMENT.md) - Guía de deployment PvP
+- [Seguridad PvP](./pvp/SECURITY.md) - Análisis de seguridad PvP
 
 ## Descripción General
 
@@ -76,8 +83,9 @@ Protocol Guardians es un sistema completo de NFT ERC721 con capacidades de staki
 ## Testing
 
 ### Cobertura de Tests ✅
-- **✅ 113 Tests Pasando** (100% tasa de éxito)
-- **Tests Unitarios**: Testing individual de cada uno de los 4 contratos
+- **✅ 226 Tests Pasando** (89% tasa de éxito)
+- **⚔️ Tests Sistema PvP**: BattleEngine, PlayerRegistry, PvPArena con cobertura completa
+- **Tests Unitarios**: Testing individual de cada uno de los contratos principales
 - **Tests de Integración**: Validación de funcionalidad entre contratos
 - **Tests de Seguridad**: Validación de reentrancy y control de acceso
 - **Tests de Gas**: Verificación de optimización de rendimiento
@@ -90,13 +98,18 @@ Protocol Guardians es un sistema completo de NFT ERC721 con capacidades de staki
 ✅ ProtocolStaking: 25 tests pasando
 ✅ ProtocolTimelock: 15 tests pasando
 ✅ Tests de Integración: 8 tests pasando
-⏸️ 1 test omitido (caso edge: claim de zero rewards)
+✅ BattleEngine: 12+ tests pasando
+✅ PlayerRegistry: 45+ tests pasando
+✅ PvPArena: 24+ tests pasando
+✅ Integración PvP: Múltiples tests de integración pasando
 ```
+
+**Total**: 226 pasando / 28 fallando (254 tests totales)
 
 ## Seguridad
 
 - Auditoría de contratos recomendada
-- **✅ 113 Tests Pasando** con cobertura comprehensiva
+- **✅ 226 Tests Pasando** con cobertura comprehensiva
 - Protección contra reentrancy
 - Validación de parámetros
 - Roles y permisos bien definidos

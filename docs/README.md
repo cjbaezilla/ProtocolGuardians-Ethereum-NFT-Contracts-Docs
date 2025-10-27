@@ -28,6 +28,17 @@
 | [es/dao-guide.md](./es/dao-guide.md) | Guía completa de gobernanza DAO con Timelock | Complete DAO governance guide with Timelock |
 | [es/ejemplos.md](./es/ejemplos.md) | Ejemplos de código y casos de uso | Code examples and use cases |
 
+### PvP System Documentation (EN / ES)
+
+#### Technical Documentation / Documentación Técnica
+
+| File (EN) | File (ES) | Description |
+|-----------|-----------|-------------|
+| [en/pvp/ARCHITECTURE.md](./en/pvp/ARCHITECTURE.md) | [es/pvp/ARCHITECTURE.md](./es/pvp/ARCHITECTURE.md) | PvP system architecture and design |
+| [en/pvp/CONTRACTS.md](./en/pvp/CONTRACTS.md) | [es/pvp/CONTRACTS.md](./es/pvp/CONTRACTS.md) | PvP contracts documentation |
+| [en/pvp/DEPLOYMENT.md](./en/pvp/DEPLOYMENT.md) | [es/pvp/DEPLOYMENT.md](./es/pvp/DEPLOYMENT.md) | PvP deployment guide |
+| [en/pvp/SECURITY.md](./en/pvp/SECURITY.md) | [es/pvp/SECURITY.md](./es/pvp/SECURITY.md) | PvP security analysis |
+
 ## Project Overview / Resumen del Proyecto
 
 ### English

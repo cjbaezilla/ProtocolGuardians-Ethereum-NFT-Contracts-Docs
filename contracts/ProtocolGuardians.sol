@@ -130,8 +130,19 @@ contract ProtocolGuardians is ERC721, Ownable {
     function batchMintToSingleAddress(address recipient, string[] memory cids) external returns (uint256[] memory tokenIds) {
         require(cids.length > 0, "ProtocolGuardians: Empty CID array");
         tokenIds = new uint256[](cids.length);
+        
+        // Optimize: batch increment _nextTokenId to avoid multiple SLOAD/SSTORE operations
+        uint256 startTokenId = _nextTokenId;
+        _nextTokenId += cids.length;
+        
         for (uint256 i = 0; i < cids.length; i++) {
-            tokenIds[i] = _mintWithCID(recipient, cids[i]);
+            uint256 tokenId = startTokenId + i;
+            _tokenCIDs[tokenId] = cids[i];
+            _cidToTokenId[cids[i]] = tokenId;
+            _mint(recipient, tokenId);
+            emit TokenMinted(recipient, tokenId);
+            emit TokenMintedWithCID(tokenId, cids[i], recipient);
+            tokenIds[i] = tokenId;
         }
         return tokenIds;
     }

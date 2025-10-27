@@ -1,0 +1,122 @@
+{
+  "name": "WILD HUNTER #008",
+  "description": "Born from the untamed wilderness of Ethereum's most volatile protocols, this Uncommon Beast entity embodies the raw, instinctual power of the crypto jungle. It has learned to trust its gut feelings over complex analysis, making decisions based on the primal instincts that have guided traders through the wildest market conditions. This Beast has survived the most brutal bear markets and thrived in the most euphoric bull runs, learning to read the subtle signs that others miss. Its connection to the natural rhythms of the crypto ecosystem runs deep, allowing it to sense opportunities before they become obvious to the masses. In the chaotic world of decentralized finance, this Beast relies on its natural abilities rather than complex strategies, finding success through pure instinct and raw determination. This is not just an NFT; it's a wild force of nature, a living embodiment of the untamed spirit that drives innovation in the crypto space. WAGMI, ser. This Beast is ready to hunt for the next big opportunity.",
+  "image": "ipfs://QmBeastUncommon008Hash",
+  "external_url": "https://protocolguardians.com/nft/008",
+  "animation_url": "ipfs://QmBeastUncommon008AnimationHash",
+  "background_color": "00FF00",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Beast 🦁"
+    },
+    {
+      "trait_type": "Family",
+      "value": "Beasts"
+    },
+    {
+      "trait_type": "Rarity",
+      "value": "Uncommon"
+    },
+    {
+      "trait_type": "Power",
+      "value": 1200,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Defense",
+      "value": 300,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Speed",
+      "value": 1500,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "HP",
+      "value": 900,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Luck",
+      "value": 180,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Mana",
+      "value": 120,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Stamina",
+      "value": 1200,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Critical",
+      "value": 600,
+      "display_type": "number",
+      "max_value": 3000
+    },
+    {
+      "trait_type": "Ability: HUNTER'S INSTINCT",
+      "value": "Increases Critical by 40% and Speed by 25% for 4 hours",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "critical_speed",
+        "value": 40,
+        "duration": 14400,
+        "cooldown": 129600,
+        "min_rarity": "uncommon",
+        "family": "beasts"
+      }
+    },
+    {
+      "trait_type": "Ability: PREDATOR'S FURY",
+      "value": "Increases Power by 35% and reduces enemy defense by 20% for 3 hours",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "power",
+        "value": 35,
+        "duration": 10800,
+        "cooldown": 172800,
+        "min_rarity": "rare",
+        "family": "beasts"
+      }
+    },
+    {
+      "trait_type": "Ability: PACK TACTICS",
+      "value": "Increases all party stats by 20% when 3+ Beasts in party",
+      "ability_data": {
+        "effect": "buff",
+        "target": "party",
+        "stat_affected": "all",
+        "value": 20,
+        "duration": 21600,
+        "cooldown": 259200,
+        "min_rarity": "epic",
+        "family": "beasts"
+      }
+    },
+    {
+      "trait_type": "Mint Date",
+      "value": 1678886400,
+      "display_type": "date"
+    },
+    {
+      "trait_type": "Generation",
+      "value": 1,
+      "display_type": "number"
+    }
+  ]
+}

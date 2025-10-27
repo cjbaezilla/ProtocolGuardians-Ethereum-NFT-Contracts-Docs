@@ -59,7 +59,11 @@ Los Guardians son entidades NFT que existen dentro del ecosistema Ethereum, cada
 - **[Boilerplate](../metadata/metadata_boilerplate.json)** - Ejemplo completo de metadata para GALACTIC GUARDIAN #007
 
 ### Soporte
-- **[FAQ](FAQ.md)** - Preguntas y respuestas extensas cubriendo gameplay, técnico y económico
+- **[FAQ](FAQ.md)** - Preguntas y respuestas extensas cubriendo gameplay, técnico y económico                                                                 
+
+### ⚔️ Sistema PvP
+- **[Reglas del Juego](pvp/GAME_RULES.md)** - Reglas y mecánicas completas del sistema PvP
+- **[Fórmulas de Batalla](pvp/BATTLE_FORMULAS.md)** - Fórmulas y cálculos detallados de combate
 
 ## 🎮 Resumen de Mecánicas de Juego
 
