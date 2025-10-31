@@ -133,14 +133,16 @@ minimum_damage = 1
 - No advantage: Normal damage
 
 **Critical Hits**:
-- Chance = critical_stat / 100
-- Example: 250 critical = 2.5% critical chance
+- Chance = critical_stat / 1000 (base 1000 system)
+- Example: 250 critical = 25% critical chance (250/1000 = 0.25)
 - Critical hits do 2x damage
+- Random value ranges from 0-1000, compared directly against critical stat
 
 **Dodge/Evasion**:
-- Chance = luck_stat / 100  
-- Example: 150 luck = 1.5% dodge chance
+- Chance = luck_stat / 1000 (base 1000 system)
+- Example: 150 luck = 15% dodge chance (150/1000 = 0.15)
 - Successful dodge = 0 damage taken
+- Random value ranges from 0-1000, compared directly against luck stat
 
 ### Win Conditions
 
@@ -155,13 +157,22 @@ minimum_damage = 1
 
 ### Card Types
 
-There are 10 card types with advantages:
+Protocol Guardians features 8 distinct types with a circular advantage system:
 
-**Type Advantages** (each type beats 2 types, weak to 2 types):
-- Type 0 beats Types 1, 2 (weak to 3, 4)
-- Type 1 beats Types 3, 4 (weak to 5, 6)
-- Type 2 beats Types 5, 6 (weak to 7, 8)
-- ... (continues pattern)
+**Type Wheel** (each type beats one type and is weak to another):
+- **Galactic ⭐** beats **Cosmic 🌌** (weak to **Chaos 💀**)
+- **Cosmic 🌌** beats **Celestial ☄️** (weak to **Galactic ⭐**)
+- **Celestial ☄️** beats **Mechanical 🤖** (weak to **Cosmic 🌌**)
+- **Mechanical 🤖** beats **Dragon 🐉** (weak to **Celestial ☄️**)
+- **Dragon 🐉** beats **Beast 🦁** (weak to **Mechanical 🤖**)
+- **Beast 🦁** beats **Elemental 🔥** (weak to **Dragon 🐉**)
+- **Elemental 🔥** beats **Chaos 💀** (weak to **Beast 🦁**)
+- **Chaos 💀** beats **Galactic ⭐** (weak to **Elemental 🔥**)
+
+**Type Effectiveness:**
+- Type advantage: +15% damage bonus
+- Type disadvantage: -15% damage penalty
+- No advantage/disadvantage: Normal damage (100%)
 
 ## ELO Ranking System
 
@@ -268,6 +279,29 @@ Formula adjusts based on ELO difference:
 - Protocol receives: `(wager * 2) * 3%`
 - Distributed immediately after battle
 - No delay or vesting
+
+**Wager Distribution Examples:**
+
+**Example 1: ETH Wager**
+- Challenger Wager: 0.1 ETH
+- Opponent Wager: 0.1 ETH
+- Total Pool: 0.2 ETH
+- Winner Receives: 0.2 ETH * 0.97 = 0.194 ETH
+- Protocol Receives: 0.2 ETH * 0.03 = 0.006 ETH
+
+**Example 2: ERC20 Token Wager (POWER tokens)**
+- Challenger Wager: 1000 POWER tokens
+- Opponent Wager: 1000 POWER tokens
+- Total Pool: 2000 POWER tokens
+- Winner Receives: 2000 * 0.97 = 1940 POWER tokens
+- Protocol Receives: 2000 * 0.03 = 60 POWER tokens
+
+**Example 3: High-Value Wager**
+- Challenger Wager: 1.0 ETH
+- Opponent Wager: 1.0 ETH
+- Total Pool: 2.0 ETH
+- Winner Receives: 2.0 ETH * 0.97 = 1.94 ETH
+- Protocol Receives: 2.0 ETH * 0.03 = 0.06 ETH
 
 **Cancellation**:
 - Challenger can cancel with 5% penalty

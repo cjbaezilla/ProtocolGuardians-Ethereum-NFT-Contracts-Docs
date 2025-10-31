@@ -8,15 +8,25 @@ The Protocol Guardians collection features 8 distinct families, each with unique
 
 ```mermaid
 graph TD
+    %% Defensive Families
     A[Guardians] --> B[Protective Abilities]
+    
+    %% Offensive Families
     C[Beasts] --> D[Hunt Abilities]
+    K[Dragons] --> L[Fury Abilities]
+    
+    %% Technological Families
     E[Mechanicals] --> F[System Abilities]
+    
+    %% Magical Families
     G[Elementals] --> H[Element Abilities]
     I[Chaos] --> J[Chaos Abilities]
-    K[Dragons] --> L[Fury Abilities]
+    
+    %% Wisdom & Reality Families
     M[Ancients] --> N[Wisdom Abilities]
     O[Void] --> P[Nullify Abilities]
     
+    %% Styling - All 8 Families
     style A fill:#ffd700,stroke:#333,stroke-width:2px
     style C fill:#8b4513,stroke:#333,stroke-width:2px
     style E fill:#808080,stroke:#333,stroke-width:2px

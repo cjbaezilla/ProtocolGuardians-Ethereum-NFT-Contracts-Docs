@@ -8,6 +8,7 @@ La colección Protocol Guardians presenta 8 tipos distintos, cada uno con caract
 
 ```mermaid
 graph TD
+    %% Ciclo de Ventajas de Tipos - Los 8 Tipos
     A[Galactic ⭐] --> B[Cosmic 🌌]
     B --> C[Celestial ☄️]
     C --> D[Mechanical 🤖]
@@ -17,6 +18,7 @@ graph TD
     G --> H[Chaos 💀]
     H --> A
     
+    %% Relaciones de Ventaja
     A -.->|Fuerte Contra| B
     B -.->|Fuerte Contra| C
     C -.->|Fuerte Contra| D

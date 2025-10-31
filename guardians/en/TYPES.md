@@ -8,6 +8,7 @@ The Protocol Guardians collection features 8 distinct types, each with unique ch
 
 ```mermaid
 graph TD
+    %% Type Advantage Cycle - All 8 Types
     A[Galactic ⭐] --> B[Cosmic 🌌]
     B --> C[Celestial ☄️]
     C --> D[Mechanical 🤖]
@@ -17,6 +18,7 @@ graph TD
     G --> H[Chaos 💀]
     H --> A
     
+    %% Advantage Relationships
     A -.->|Strong Against| B
     B -.->|Strong Against| C
     C -.->|Strong Against| D
@@ -263,7 +265,7 @@ Each type belongs to a family that has exclusive signature abilities:
 
 - **Galactic** → **Guardians Family**: Protective abilities
 - **Cosmic** → **Ancients Family**: Wisdom abilities
-- **Celestial** → **Guardians Family**: Divine abilities
+- **Celestial** → **Void Family**: Nullify abilities
 - **Mechanical** → **Mechanicals Family**: System abilities
 - **Dragon** → **Dragons Family**: Fury abilities
 - **Beast** → **Beasts Family**: Hunt abilities
